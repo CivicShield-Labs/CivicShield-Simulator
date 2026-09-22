@@ -1,0 +1,18 @@
+server:
+  port: ${PORT:8081}
+
+spring:
+  application:
+    name: civicshield-simulator
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+civicshield:
+  platform:
+    base-url: ${CIVICSHIELD_PLATFORM_URL:http://localhost:8080}
+    username: ${CIVICSHIELD_PLATFORM_USER:civicshield}
+    password: ${CIVICSHIELD_PLATFORM_PASSWORD:change-this-before-any-deployment}
